@@ -1,0 +1,183 @@
+/**index.wxss**/
+scroll-view{
+  width:100%;
+  height:100%;
+  position:relative;
+  background: #f5f5f5;
+}
+
+.indexbanner{
+  position: relative;
+  height:460rpx;
+  margin-bottom:20rpx;
+}
+
+.indexbanner .city-weather{
+  box-sizing:border-box;
+  width:100%;
+  height:60rpx;
+  line-height: 60rpx;
+  background: rgba(0,0,0,0.3);
+  position:absolute;
+  top:0;
+  left:0;
+  padding:0 40rpx;
+  color:#fff;
+  font-size:30rpx;
+}
+
+.indexbanner .city-weather .col{
+  width:25%;
+  float:left;
+  text-align:center;
+}
+
+.indexbanner .banner{
+  width:100%;
+  height:100%;
+}
+
+.indexbanner .contact-logo{
+  position: absolute;
+  width:140rpx;
+  height:140rpx;
+  bottom:30rpx;
+  right:30rpx;
+}
+
+.floor{
+  padding:0 40rpx;
+}
+
+.floor .title{
+  padding:20rpx 0;
+  position: relative;
+}
+
+.floor .title .show-more{
+  float:right;
+  color:#fb9454;
+  font-size:30rpx;
+  margin-top:4rpx;
+}
+
+.floor .list{
+  overflow: hidden;
+}
+
+.floor .list .item{
+  width:48%;
+  float:left;
+  margin:1%;
+  /* box-shadow: 0 0 20rpx 20rpx #888 outset; */
+  background: #fff;
+  border-radius:20rpx;
+}
+
+.floor .list .item .goods-img{
+  height:250rpx;
+}
+
+.floor .list .item .goods-img image{
+  height:100%;
+  width:100%;
+}
+
+.floor .list .item .goods-msg{
+  padding:10rpx;
+  box-sizing:border-box;
+}
+
+.floor .list .item .goods-msg .goods-name{
+  font-size:24rpx;
+}
+
+.floor .list .item .goods-msg .goods-price{
+  padding-top:10rpx;
+  font-size:20rpx;
+}
+
+.floor .list .item .goods-msg .goods-price .hotsale-price{
+  color:#fb8a1d;
+  margin-right:40rpx;
+}
+
+.floor .list .item .goods-msg .goods-price .shop-price{
+  color:#9c9c9c;
+  text-decoration: line-through;
+}
+
+.about-company{
+  color:#a7a7a7;
+  text-align: center;
+   margin-top:40rpx; 
+  font-size:24rpx;
+}
+.about-company .company-name{
+  font-size:30rpx;
+}
+.contact-modal{
+  position: absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  background: rgba(0,0,0,0.6);
+  z-index:20;
+}
+
+.contact-modal .window{
+  width:600rpx;
+  height:750rpx;
+  position: absolute;
+  left:50%;
+  top:50%;
+  background: #fff;
+  border-radius:20rpx;
+  margin-left:-300rpx;
+  margin-top:-375rpx;
+  overflow: hidden;
+}
+
+.contact-modal .window .top{
+  height:120rpx;
+  color:#fff;
+  text-align: center;
+  line-height: 120rpx;
+  background: #12718e;
+  overflow: hidden;
+  padding:0 60rpx;
+  box-sizing: border-box;
+}
+
+.contact-modal .window .top image{
+  height:72rpx;
+  width:150rpx;
+  margin-top:24rpx; 
+  float:left;
+  margin-left:20rpx;
+  margin-right:40rpx;
+}
+
+.contact-modal .window .top text{
+  float:left;
+}
+
+.contact-modal .window .middle{
+  height:480rpx;
+  padding:50rpx 50rpx 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contact-modal .window .middle image{
+  width:350rpx;
+  height:350rpx;
+}
+
+.contact-modal .window .bottom{
+  text-align: center;
+  height:150rpx;
+  box-sizing:border-box;
+  padding:0 0 20rpx;
+}

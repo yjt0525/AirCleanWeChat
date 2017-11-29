@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<scroll-view scroll-y>
+  <view class="indexbanner">
+    <view class="city-weather">
+      <view class="col" style="width:15%;">{{ MyCity }}</view>
+      <view class="col" style="width:20%;">PM:<text class="{{ MyPM<75?'font-green':MyPM<150?'font-yellow':'font-red' }}">{{ MyPM }}</text></view>
+      <view class="col">危险度：<text class="{{ MyPM<75?'font-green':MyPM<150?'font-yellow':'font-red' }}">{{ MyPM<75?'低':MyPM<150?'中':'高' }}</text></view>
+      <view class="col" style="width:40%;">空气新鲜地<text class="font-green">PM:0</text></view>
+    </view>
+    <image class="banner" src="/img/indexbg.png"></image>
+    <image class="contact-logo" src="/img/contact.png" bindtap="ShowContactModal"></image>
+  </view>
+  <view class="floor">
+    <view class="title">
+      <text>热销产品</text>
+      <view class="show-more" bindtap="ShowMore">更多产品>></view>
+    </view>
+    <view class="list">
+      <view wx:for="{{ IndexList }}" wx:key="{{ item }}" data-index="{{ item.ProductId }}" class="item" bindtap='ShowDetail'>
+        <view class="goods-img">
+          <image src="{{ item.ProductScaleImg }}"></image>
+        </view>
+        <view class="goods-msg">
+          <view class="goods-name">{{ item.ProductName }}</view>
+          <view class="goods-price">
+            <view class="hotsale-price">热销价：{{ item.ProductSalePrice }}</view>
+            <view class="shop-price">门市价：{{ item.ProductShopPrice }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="about-company">
+    <view class="company-name">陕西新境界环境科技有限公司</view>
+    <view class="company-address">公司地址：</view>
+    <view>西安市雁塔区小寨西路98号皇家公馆英郡楼1501室</view>
+  </view>
+</scroll-view>
+
+<view class="contact-modal" wx:if="{{ ShowContact }}" bindtap="HideContactModal">
+  <view class="window">
+    <view class='top'>
+      <image src='http://139.196.27.162:8085/img/logo.png'></image>
+      <text>联系我有更多好礼</text>
+    </view>
+    <view class='middle'>
+      <image src='http://139.196.27.162:8085/img/qrcode.png'></image>
+    </view>
+    <view class='bottom' bindtap='MakeCall'>
+      <view>服务热线：029-89353430</view>
+      <view>联系人：李孟顺</view>
+    </view>
+  </view>
+</view>

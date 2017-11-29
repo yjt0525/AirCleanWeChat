@@ -1,0 +1,4 @@
+<!--pages/detail/detail.wxml-->
+<scroll-view scroll-y>
+  <image mode='widthFix' wx:for="{{ DetailImg }}" wx:key="{{ item }}" src="{{ item }}"></image>
+</scroll-view>

@@ -1,0 +1,27 @@
+<!--pages/list/list.wxml-->
+<scroll-view scroll-y>
+  <view class='picker'>
+    <picker bindchange="ChangePicker" value="{{index}}" range="{{array}}">
+      <image src="/img/pickerbg.png"></image>
+      <view class="picker">
+        {{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class='floor'>
+    <view class="list">
+      <view wx:for="{{ ClassifyProduct }}" wx:key="{{ item }}" data-index="{{ item.ProductId }}" class="item" bindtap='ShowDetail'>
+        <view class="goods-img">
+          <image src="{{ item.ProductScaleImg }}"></image>
+        </view>
+        <view class="goods-msg">
+          <view class="goods-name">{{ item.ProductName }}</view>
+          <view class="goods-price">
+            <view class="hotsale-price">热销价：{{ item.ProductSalePrice }}</view>
+            <view class="shop-price">门市价：{{ item.ProductShopPrice }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
